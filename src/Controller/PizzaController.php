@@ -4,14 +4,15 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class PizzaController
+class PizzaController extends AbstractController
 {
     /**
      * @Route("/")
      */
     
-    public function number(): Response
+    public function random(): Response
     {
         $pizzas = [
             "PIZZA PEPPERONI DELUXE",
@@ -24,10 +25,9 @@ class PizzaController
             "PIZZA FUNGHI"
         ];
 
+        return $this->render('pizza/pizza.html.twig',[
+            'pizzas' => $pizzas[array_rand($pizzas)],
 
-
-        return new Response(
-            '<html><body>Lucky pizza:'.$pizzas[array_rand($pizzas)].'</body></html>'
-        );
+        ]);
     }
 }
