@@ -9,9 +9,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PizzaController extends AbstractController
 {
     /**
-     * @Route("/")
+     * @Route("/pizza")
      */
-    
+
     public function random(): Response
     {
         $pizzas = [
