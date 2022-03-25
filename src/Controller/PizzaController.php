@@ -15,18 +15,27 @@ class PizzaController extends AbstractController
     public function random(): Response
     {
         $pizzas = [
-            "PIZZA PEPPERONI DELUXE",
-            "PIZZA PEPPERONI PARTY",
-            "PIZZA VEGGI CHICKEN SUPREME",
-            "PIZZA FRESH 'N TASTY",
-            "PIZZA VEGERONI",
-            "PIZZA MARGARITHA",
-            "PIZZA HAM",
-            "PIZZA FUNGHI"
+            "Kip",
+            "Vis",
+            "Vega"
+        ];
+
+        $pizzatexten =[
+            "Kip",
+            "Vis",
+            "Vega"
+            ];
+
+        $pizzaimage = [
+            "https://images.newyorkpizza.nl/Products/Original/Hete_Kip_pizza-7485.png",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZPGb1sJ5W9C21cKz7llspurW5x_lb0f7Fhw&usqp=CAU",
+            "https://i.redd.it/t7jlrf6snev41.jpg"
         ];
 
         return $this->render('pizza/pizza.html.twig',[
-            'pizzas' => $pizzas[array_rand($pizzas)],
+            'pizzas' => $pizzas,
+            'pizzatexten' => $pizzatexten,
+            'pizzaimage' => $pizzaimage
 
         ]);
     }

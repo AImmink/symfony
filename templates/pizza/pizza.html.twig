@@ -28,15 +28,36 @@
                 </div>
             </nav>
             <div class="text-center">
-                <img src="https://logos-world.net/wp-content/uploads/2021/08/Dominos-Logo.png" style="height: 10%; width: 10%; align-items: centerglksdhglkhslghshglkdhgkdlghdklhdslgdshlkgdlkkldsglklkdsklhdkldhglshlkdshkdshlkshdlhg">
+                <img src="https://media.discordapp.net/attachments/941658101281607690/956869084933390346/IMG-20220324-WA0000.jpg?width=559&height=630" style="height: 10%; width: 10%; align-items: centerglksdhglkhslghshglkdhgkdlghdklhdslgdshlkgdlkkldsglklkdsklhdkldhglshlkdshkdshlkshdlhg">
             </div>
             <div class="bg-danger text-center">
                 <h1>Pizza Sopranos</h1>
                 <h3>Pizza's met liefde gemaakt</h3>
             </div>
             <h1 class="text-center">Dit is ons assortiment</h1>
-
-            <div class="text-center">
-                {{ pizzas }}
+            <div class="row d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ pizzaimage[0] }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-text">{{ pizzas[0] }}</h3>
+                            <p class="card-text">{{ pizzatexten[0]}}</p>
+                        </div>
+                    </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ pizzaimage[1] }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-text">{{ pizzas[1] }}</h3>
+                        <p class="card-text">{{ pizzatexten[1]}}</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ pizzaimage[2] }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-text">{{ pizzas[2] }}</h3>
+                        <p class="card-text">{{ pizzatexten[2]}}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
             </div>
         {% endblock %}
